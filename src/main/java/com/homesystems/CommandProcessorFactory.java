@@ -10,7 +10,8 @@ import dagger.Component;
       LoginCommandModule.class,
       HelloWorldModule.class,
       SystemOutModule.class,
-      UserCommandsRouter.InstallationModule.class
+      UserCommandsRouter.InstallationModule.class,
+      AmountsModule.class
     })
 interface CommandProcessorFactory {
   CommandProcessor commandProcessor();

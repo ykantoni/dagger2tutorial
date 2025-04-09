@@ -44,6 +44,6 @@ final class CommandRouter {
   
     // Split on whitespace
     private static List<String> split(String input) {
-      return Arrays.asList(input.trim().split("\\s+"));
+        return Arrays.asList(input.trim().split("\\s+"));
     }
   }

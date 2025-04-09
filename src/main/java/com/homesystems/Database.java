@@ -3,9 +3,7 @@ package com.homesystems;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
-
 import javax.inject.Singleton;
-
 import jakarta.inject.Inject;
 
 @Singleton
@@ -18,7 +16,9 @@ class Database {
     }
   
     Account getAccount(String username) {
-      return accounts.computeIfAbsent(username, Account::new);
+      Account a = accounts.computeIfAbsent(username, Account::new);
+      System.out.println("Database::get by username " + username + " balance " + a.balance().intValue());
+      return a;
     }
   
     static final class Account {
@@ -47,5 +47,10 @@ class Database {
       void deposit(BigDecimal amount) {
         balance = balance.add(amount);
       }
+
+      void withdraw(BigDecimal amount) {
+        balance = balance.subtract(amount);
+      }
+
     }
   }
