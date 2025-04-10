@@ -24,6 +24,10 @@ interface Command {
       return new Result(Status.HANDLED, Optional.empty());
     }
 
+    static Result inputCompleted() {
+      return new Result(Status.INPUT_COMPLETED, Optional.empty());
+    }
+
     Status status() {
       return status;
     }

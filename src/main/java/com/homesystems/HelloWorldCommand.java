@@ -11,7 +11,7 @@ final class HelloWorldCommand implements Command {
     @Inject
     HelloWorldCommand(Outputter outputter) {
       this.outputter = outputter;
-      System.out.println("Creating a new " + this);
+      outputter.output("Creating a new " + this);
     }
   
     @Override

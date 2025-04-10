@@ -33,7 +33,7 @@ final class WithdrawCommand extends BigDecimalCommand {
       } else {
         BigDecimal newBalance = account.balance().subtract(amount);
         if (newBalance.compareTo(minimumBalance) < 0) {
-          System.out.println("Canceled - minimum balamce must be " + minimumBalance);
+          System.out.println("Canceled - minimum balance must be " + minimumBalance);
         } else {
           account.withdraw(amount);
         }

@@ -13,7 +13,7 @@ final class DepositCommand extends BigDecimalCommand {
     super(outputter);
     this.account = account;
     this.outputter = outputter;
-    System.out.println("Creating a new " + this);
+    outputter.output("Creating a new " + this);
   }
 
   @Override

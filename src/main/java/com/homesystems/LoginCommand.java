@@ -17,7 +17,7 @@ final class LoginCommand extends SingleArgCommand {
     this.database = database;
     this.outputter = outputter;
     this.userCommandsRouterFactory = userCommandsRouterFactory;
-    System.out.println("Creating a new " + this);
+    outputter.output("Creating a new " + this);
   }
 
   @Override
